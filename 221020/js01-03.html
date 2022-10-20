@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>문자연산자</title>
+    <script>
+        let con="마마무"+"솔라"[0]+"문별"[0]+"휘인"[0]+"화사"[0]
+
+        console.log("마마무"+"솔라"+"문별"+"휘인"+"화사");                   //마마무솔라문별휘인화사
+        console.log("마마무"+"솔라"[0]+"문별"[0]+"휘인"[0]+"화사"[0]);       //마마무솔문휘화
+        console.log(con);                                                  //마마무솔문휘화
+        console.log(con.length);                                           //7
+
+        //var
+        var num = 1234;     
+        var num = 3456;     //var은 값을 넣는대로 덮어씀
+
+        //let
+        let num1 = 1234;
+        // let num1 = 3456;    //let은 값을 덮어쓸 수 없음
+        //선언, 대입 다 됨
+
+        //const
+        const num2 = 1234;
+        // const는 선언할때 값을 넣어주는것이 좋음 -> 선언만하면 다음에 값을 넣을 수 XX
+        // const num2 = 3456;  //const는 값을 덮어쓸 수 없음, 변수자체를 변경할수없음
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

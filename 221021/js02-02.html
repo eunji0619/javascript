@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let num = prompt('숫자를 입력하세요.');
+        console.log(typeof(num));
+        document.write("<h3>입력하신" + num + "값은" + typeof(num) + " 입니다</h3>");   //입력하신1234값은string 입니다
+
+        num = Number(num);
+        document.write(num+' -> 숫자로 변환완료 '+ typeof(num));
+        // document.write(Number(num)+ ' -> 숫자로 변환완료 : ' + typeof(Number(num)));
+
+        document.write( '<h3>'+num + '의 자료형은' + typeof(num) +'</h3>');
+        // num = String(num);
+        document.write(String(num)+ ' -> 문자로 변환완료 : ' + typeof(String(num)));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

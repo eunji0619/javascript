@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>불 자료형 변환</title>
+    <script>
+        let list='';
+        let variable;
+        list+='<table border>';
+        list+='<tr><th>true</th><th>false</th></tr>';
+        list+=`<tr><td>Boolean('0') = ${Boolean('0')}</td><td>Boolean(0) = ${Boolean(0)}</td></tr>`;
+        list+=`<tr><td>Boolean(1324) = ${Boolean(1324)}</td><td>Boolean(NaN) = ${Boolean(NaN)}</td></tr>`;
+        list+=`<tr><td>Boolean(-1) = ${Boolean(-1)}</td><td>Boolean("") = ${Boolean("")}</td></tr>`;
+        list+=`<tr><td>Boolean('false') = ${Boolean('false')}</td><td>Boolean(null) = ${Boolean(null)}</td></tr>`;
+        list+=`<tr><td></td><td>Boolean(variable) = ${Boolean(variable)}</td></tr>`;
+        list+=`<tr><td>!!'안녕하세요' = ${!!'안녕하세요'}</td><td>!!'' = ${!!''}</td></tr>`;
+        list+=`<tr><td>!!273 = ${!!273}</td><td>!!0 = ${!!0}</td></tr>`;
+        list+='</table>';
+        document.write(list);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

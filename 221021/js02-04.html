@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>예제</title>
+    <script>
+        document.write('<h2>예제 1번</h2>')
+        let r = prompt('반지름을 입력하세요');
+        const pi = 3.14;
+        
+        r = Number(r);
+        let S = pi*(r*r);
+        let L = 2*pi*r;
+        
+        document.write('원의 넓이 : '+ S + '<br>');     //3입력시 28.26
+        document.write('원의 둘레 : '+ L + '<br>');     //3입력시 18.84
+        
+
+        document.write('<h2>예제 2번</h2>');
+
+        let ex_rate = prompt('달러 환률을 입력해주세요');
+        let dollar = prompt('변환하고자 하는 달러를 입력해주세요');
+        document.write('달러 환율 : ' + ex_rate + '<br>변환하고자 하는 달러 : $' + dollar +'<br>');
+        ex_rate = Number(ex_rate);
+        dollar = Number(dollar);
+
+        document.write('원화로 '+ex_rate*dollar+' 입니다.<br>');
+
+        // let list='';
+        // list +=(`<form action ='https://namu.wiki/w/%EB%A7%88%EB%A7%88%EB%AC%B4'><button>마마무</button></form>`);
+        // document.write(list);
+        
+        document.write('<h2>예제 3번</h2>');
+
+        let list='';
+        let num = prompt('2~9 사이의 값을 입력해주세요');
+        num = Number(num);
+        
+        list += '<table border>';
+        list+=`<tr><td>${num} x 1 = ${num*1}</td></tr>`;
+        list+=`<tr><td>${num} x 2 = ${num*2}</td></tr>`;
+        list+=`<tr><td>${num} x 3 = ${num*3}</td></tr>`;
+        list+=`<tr><td>${num} x 4 = ${num*4}</td></tr>`;
+        list+=`<tr><td>${num} x 5 = ${num*5}</td></tr>`;
+        list+=`<tr><td>${num} x 6 = ${num*6}</td></tr>`;
+        list+=`<tr><td>${num} x 7 = ${num*7}</td></tr>`;
+        list+=`<tr><td>${num} x 8 = ${num*8}</td></tr>`;
+        list+=`<tr><td>${num} x 9 = ${num*9}</td></tr>`;
+        list+= '</table>';
+        document.write(list);
+
+        // let num1 = prompt('2~9 사이의 값을 입력해주세요');
+        // if (num1 >= 2 && num1 <=9){
+        //     for(let i = 1; i < 9; i++){
+        //         document.write( `${num1} x ${i} = ` + num1 * i+'<br>');
+        //     }
+        // }
+        // else{
+        //     alert('2~9사이의 값이 아님');
+        // }
+
+        document.write('<h2>예제 4번</h2>');
+        let k_score = Number(prompt('국어 점수 입력'));
+        let m_score = Number(prompt('수학 점수 입력'));
+        let s_score = Number(prompt('과학 점수 입력'));
+
+        alert('\n국어 점수 : ' + k_score + '\n수학 점수 : ' + k_score + '\n과학 점수 : ' + k_score + '\n평균 : '+ (k_score+m_score+s_score)/3);
+
+        // document.write(k_score>=70&&m_score>=50&&s_score>=80);
+
+        if(k_score>=70&&m_score>=50&&s_score>=80){
+            document.write('합격');
+        }
+        else{
+            document.write('불합격');
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

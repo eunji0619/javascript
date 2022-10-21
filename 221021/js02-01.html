@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        let list="";
+        let bool = false;
+        list+='<h2>논리연산자</h2><h3>입력하신 <mark>false</mark>에 대한 결과를 표로 나타내면</h3>';
+        list+='<table border>';
+        list+='<tr><th>&&연산</th><th>연산</th><th>값</th><th>결과</th></tr>';
+        list+=`<tr><td><mark>${bool}</mark></td><td>&&</td><td>false</td><td>${bool&&false}</td></tr>`;
+        list+=`<tr><td><mark>${bool}</mark></td><td>&&</td><td>true</td><td>${bool&&true}</td></tr>`;
+        
+        list+='<tr><th>||연산</th><th>연산</th><th>값</th><th>결과</th></tr>';
+        list+=`<tr><td><mark>${bool}</mark></td><td>||</td><td>false</td><td>${bool||false}</td></tr>`;
+        list+=`<tr><td><mark>${bool}</mark></td><td>||</td><td>true</td><td>${bool||true}</td></tr>`;
+        list+='</table>';
+        document.write(list);
+    </script>
+    <style>
+        mark{
+            border: 1px solid #000;
+        }
+        table{
+            text-align: center;
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        th{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+</body>
+</html>

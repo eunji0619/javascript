@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>현재시각 구하기</title>
+</head>
+<body>
+    <script>
+        const date = new Date();
+        const year = date.getFullYear();
+        const month = date.getMonth() + 1; //month는 0부터 시작을 해서 1을 더해주어야함
+        const day = date.getDate();
+        const hour = date.getHours();
+        const min = date.getMinutes();
+        const sec = date.getSeconds();
+
+        // document.write(`${date} <br> 
+        //     ${year} 년 ${month} 월 ${day} 일 ${hour} 시 ${min} 분 ${sec} 초 <br>`);
+
+        // if(hour<12){
+        //     document.write('오전입니다.<br>');
+        // }
+        // else{
+        //     document.write('오후입니다.<br>');
+        // }
+        
+        // if(sec >= 30){
+        //     document.write('30초 이상입니다.<br>');
+        // }
+        // else{
+        //     document.write('30초 미만입니다.<br>')
+        // }
+
+        // if(`${min%2==0}`){
+        //     document.write('지금은 짝수입니다.');
+        // }
+        // else{
+        //     document.write('지금은 홀수입니다.');
+        // }
+        document.write(`${date} <br> 
+            오늘은 ${year} / ${month} / ${day} 일 입니다.<br>
+            유통기한은 ${year+1} / ${month+1} / ${day+6} 일 입니다.`);
+
+        // console.log(date.toISOString()); 세계 표준시 출력
+
+    </script>
+</body>
+</html>

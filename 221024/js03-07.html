@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>예제</title>
+</head>
+<style>
+    table{
+        text-align: center;
+        border: 1px solid #000;
+        border-collapse: collapse;
+    }
+</style>
+<body>
+    <script>
+        let list ="";
+        let pay_money = Number(prompt('지불할 금액을 입력해주세요'));
+        let goods_price = Number(prompt('물건값을 입력해주세요'));
+        let change = pay_money - goods_price;
+        let oman_won, man_won, ocheon_won, cheon_won, obaeg_won, baeg_won, sib_won; 
+        
+        oman_won = parseInt(change / 50000);
+        change = change % 50000;
+
+        man_won = parseInt(change / 10000);
+        change = change % 10000;
+
+        ocheon_won = parseInt(change / 5000);
+        change = change % 5000;
+        
+        cheon_won = parseInt(change / 1000);
+        change = change % 1000;
+        
+        obaeg_won = parseInt(change / 500);
+        change = change % 500;
+        
+        baeg_won = parseInt(change / 100);
+        change = change % 100;
+
+        sib_won = parseInt(change / 10);
+        change = change % 10;
+
+        list +=`<table border>`;
+        list +=`    <tr>`;
+        list +=`        <th>돈</th>`;
+        list +=`        <th>개수</th>`;
+        list+=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>50,000원</td>`;
+        list +=`        <td>${oman_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>10,000원</td>`;
+        list +=`        <td>${man_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>5,000원</td>`;
+        list +=`        <td>${ocheon_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>1,000원</td>`;
+        list +=`        <td>${cheon_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>500원</td>`;
+        list +=`        <td>${obaeg_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>100원</td>`;
+        list +=`        <td>${baeg_won}</td>`;
+        list +=`    </tr>`;
+        list +=`    <tr>`;
+        list +=`        <td>10원</td>`;
+        list +=`        <td>${sib_won}</td>`;
+        list +=`    </tr>`;
+        list +=`</table>`;
+
+        document.write(list);
+    </script>
+</body>
+</html>

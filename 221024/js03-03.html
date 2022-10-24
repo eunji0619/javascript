@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>예제2</title>
+    <style>
+        table{
+            border: 1px solid #000;
+            border-collapse: collapse;
+        }
+        td{
+            width: 50px;
+            height: 30px;
+        }
+        td:nth-child(n){
+            background-color: purple;
+        }
+        td:nth-child(n+7){
+            background-color: blue;
+        }
+        td:nth-child(n+11){
+            background-color: yellow;
+        }
+        td:nth-child(n+15){
+            background-color: orange;
+        }
+        td:nth-child(n+18){
+            background-color: red;
+        }
+        p{
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <table border>
+        <tr>
+            <th colspan="6">16미만</th>
+            <th colspan="4">16이상 ~ 22미만</th>
+            <th colspan="4">22이상 ~ 28미만</th>
+            <th colspan="3">28이상 ~ 32미만</th>
+            <th colspan="6">32이상</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th colspan="6">정상온도를 벗어났습니다.</th>
+            <th colspan="4">시원하네요</th>
+            <th colspan="4">보통이에요</th>
+            <th colspan="3">갑갑하네요</th>
+            <th colspan="6">정상온도를 벗어났습니다.</th>
+        </tr>
+    </table>
+    <script>
+        let comment;
+        let degree = prompt('온도를 입력해주세요');
+        if(degree < 16){
+            comment ='정상온도를 벗어났습니다.';
+        }
+        else if(degree >= 16 && degree < 22){
+            comment = '시원하네요.';
+        }
+        else if(degree >= 22 && degree < 28){
+            comment = '보통이에요.';
+        }
+        else if(degree >= 28 && degree < 32){
+            comment = '갑갑하네요.';
+        }
+        else{
+            comment = '정상온도를 벗어났습니다.';
+        }
+        document.write(`<p>지금 온도는 <mark>${degree}º</mark> 이며, 상태는 <mark>${comment}</mark></p>`);
+    </script>
+</body>
+</html>

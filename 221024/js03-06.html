@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>예제</title>
+</head>
+<body>
+    <script>
+        const year = Number(prompt('태어난 년도를 입력해주세요'));
+        let result;
+
+        if(year%12==0){result ='원숭이';}
+        else if(year%12==1){result ='닭';}
+        else if(year%12==2){result ='개';}
+        else if(year%12==3){result ='돼지';}
+        else if(year%12==4){result ='쥐';}
+        else if(year%12==5){result ='소';}
+        else if(year%12==6){result ='호랑이';}
+        else if(year%12==7){result ='토끼';}
+        else if(year%12==8){result ='용';}
+        else if(year%12==9){result ='뱀';}
+        else if(year%12==10){result ='말';}
+        else if(year%12==11){result ='양';}
+        
+        document.write(`${year}년도에 태어난 사람은 ${result}띠 입니다.`);
+    </script>
+</body>
+</html>

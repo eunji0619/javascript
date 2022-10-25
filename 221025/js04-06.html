@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>구구단 표</title>
+</head>
+<body>
+    <script>
+        let box ="";
+        for(let i=1; i<=9;i++){
+            box+=i+'번째';
+            for(let j=1; j<=9; j++){
+                box +=' '+j+' ';
+            }
+            box+='<br>';
+        }
+        document.write(box);
+
+        // let multi="";
+        // multi+='<table>'
+        // for(let i=1; i<=9; i++){
+        //     for(let j=2; j<=9; j++){
+        //         multi += j +' X ' + i +' = '+ i*j + '\t';
+        //     }
+        //     multi+='<br>';
+        // }
+        // document.write(multi);
+
+        let list1="";
+        list1+='<table border>';
+            for(let i = 1; i <= 9; i++){
+                list1+='<tr>';
+                for(let j = 2; j <= 9; j++){
+                    list1 +=`<td>${j} X ${i} = ${i*j}</td>`;
+                }
+                list1+='</tr>';
+            }
+        list1+='</table>'
+        document.write(list1);
+    </script>
+</body>
+</html>

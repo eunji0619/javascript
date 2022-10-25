@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>배열 요소 제거</title>
+</head>
+<body>
+    <script>
+        const num = [1,2,3,4,5,6,7,8,9,10];
+        // let num_m = num.splice(3,3);
+        // console.log(num_m);
+        console.log(num);
+
+        // const inum = num.indexOf(7);     //인덱스 위치를 찾음, 없으면 -1 리턴
+        // console.log(inum)
+        let c = 7;
+        let num_m = num.splice(num.indexOf(c),3);
+        console.log(num);
+
+        const str = '마마무일낼라하나둘셋 어이';
+        console.log(str.indexOf('일'));
+        console.log(str.indexOf('낼라'));
+        console.log(str.indexOf('어이'));
+        console.log(str.indexOf('셋 어'));
+    </script>
+</body>
+</html>

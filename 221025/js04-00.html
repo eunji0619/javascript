@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>확률게임</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.6/dayjs.min.js"></script>
+</head>
+<body>
+    <script>
+        const now = dayjs();
+        // let ran = now.format("ss");
+        let ran = now.get("ms");    //0~999
+        let con = confirm('확인과 취소중에 하나를 입력하세요.')
+
+        if(ran % 2== con){
+            document.write(`<h2>당신이 이겼습니다. 랜덤숫자 : ${ran}</h2>`);
+        }
+        else{
+            document.write(`<h2>당신이 졌습니다. 랜덤숫자 : ${ran}</h2>`);
+        }
+
+        console.log(ran);
+    </script>
+</body>
+</html>

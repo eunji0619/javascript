@@ -8,10 +8,10 @@
         const num = Number(prompt('숫자를 입력하세요.'));
         let result = num >= 0 ? alert('0보다 같거나 큼') : alert('0보다 작음');
 
-        const input = Number(prompt('정수를 입력해주세요 '));
+        const input = prompt('정수를 입력해주세요 ');
         const last = input[input.length-1];
 
-        if(last === 0 || last == 2 || last == 4 ||last == 6 ||last == 8){
+        if(last === "0" || last == "2" || last == "4" || last == "6" || last == "8"){
             alert(`${input} 은 짝수입니다.`);
         }
         else{

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>배열 요소 추가</title>
+</head>
+<body>
+    <script>
+        const num = [1,2,3,4,5,6,7,8,9,10];
+        // num.splice(4,0,'|')     //4번째 인덱스 위치에 원하는 요소를 삽입
+        // console.log(num);
+
+        num.splice(7,0,'도시락');       //[1,2,3,4,5,6,7,도시락,8,9,10]
+        console.log(num);
+        // num.splice(num.indexOf(8),0,'도시락');
+        // console.log(num);
+        
+        // num.splice(9,0,'점심시간');     //[1,2,3,4,5,6,7,도시락,8,점심시간,9,10]
+        // console.log(num);
+        num.splice(num.indexOf(9),0,'점심시간');
+        console.log(num);
+        
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>랜덤 예제</title>
+</head>
+<body>
+    <script>
+        const ran = parseInt(Math.random()*100 + 5);
+        // 레어, 유니크, 전설, 신화
+        console.log(ran);
+
+        if(ran > 7 && ran <= 10){
+            document.write("유니크 등급");
+        }
+        if(ran > 4 && ran <= 7){
+            document.write("전설 등급");
+        }
+        if (ran <= 4){
+            document.write("신화 등급");
+        }
+        if(ran > 10){
+            document.write("레어 등급");
+        }
+
+    </script>
+</body>
+</html>

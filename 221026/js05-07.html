@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*임의의 수*/
+        // let num;
+        // let random = parseInt(Math.random()*100+1);
+        // let count=7;
+
+        // while(count){
+        //     num = Number(prompt('숫자를 입력해주세요'));
+
+        //     if(num > random){
+        //         count --;
+        //         alert(`이거 보다 작음. 남은 기회 ${count}`);
+        //     }
+        //     else if(num < random) {
+        //         count --;
+        //         alert(`이거 보다 큼. 남은 기회 ${count}`);
+        //     }
+        //     else{
+        //         alert(`${7-count}번 만에 정답!!`);
+        //         break;
+        //     }
+        //     document.write('끝')
+        // }
+         
+        let comc=userc=ct=0;
+        
+        while(1){
+            let ran = parseInt(Math.random()*3) // 0~2 랜덤선정
+            let com = ['가위','바위','보']
+            const user = prompt('가위,바위,보,그만 중 하나를 입력하세요.')
+            if (com[ran]==user){
+                ct++ // 게임 수
+                alert('['+ct+'회째]\n컴퓨터:'+com[ran]+'\n당신:'+user+'\n비겼습니다 -.-\n컴퓨터'+comc+'승, 당신'+userc+'승')
+            }
+            if((ran==0&&user=='보')||(ran==1&&user=='가위')||(ran==2&&user=='바위')){
+                ct++// 게임 수
+                comc++// 컴승 수
+                alert('['+ct+'회째]\n컴퓨터:'+com[ran]+'\n당신:'+user+'\n컴퓨터가 이겼습니다. 깝ㄴㄴ!!\n컴퓨터'+comc+'승, 당신'+userc+'승')
+            }
+            if((ran==0&&user=='바위')||(ran==1&&user=='보')||(ran==2&&user=='가위')){
+                ct++// 게임 수
+                userc++// 유저승 수
+                alert('['+ct+'회째]\n컴퓨터:'+com[ran]+'\n당신:'+user+'\n축하합니다. 당신이 이겼습니다!\n컴퓨터'+comc+'승, 당신'+userc+'승')
+            }
+            if(user=='그만')break;
+            // 어래이로 도전해보기
+        }
+        document.write('이용해 주셔서 감사합니다!')
+
+    </script>
+</body>
+</html>

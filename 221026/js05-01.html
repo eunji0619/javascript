@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = Number(prompt('숫자를 입력해주세요'));
+        // let num1 = Number(prompt('숫자를 입력해주세요'));
+        // let sum = 0;
+        // let list ='';
+
+        // document.write(`입력하신 ${num}부터 ${num1}까지 출력하면 <br>`);
+        // for(let i = num; i<=num1; i++){
+        //     sum = sum + i;
+        //     // document.write(`${i}  `); 
+        //     list +=`${i}, `;
+        //     if(i == num1){
+        //         list = toString(list);
+        //         list.slice(0,-1);
+        //     }
+        //     document.write(list);
+        // }
+        // document.write(`이며 <br><br> 합은 : ${sum}입니다.`);
+
+        let num = Number(prompt('숫자를 입력해주세요'));
+        let num1 = Number(prompt('숫자를 입력해주세요'));
+        let sum = 0;
+
+        // document.write(`입력하신 ${num}부터 ${num1}까지 출력하면 <br>`);
+        for(let i = num; i<=num1; i++){
+            if(i%2==0){
+                sum = sum + i;
+                document.write(`입력하신 ${num}부터 ${i}까지 짝수만 합하면 ${sum}<br>`)
+                // document.write(`${i}  `); 
+            }
+        }
+        document.write(`<br><br> 합은 : ${sum}입니다.`);
+
+
+    </script>
+</body>
+</html>

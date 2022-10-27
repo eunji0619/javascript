@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = ['서울','부산','대구','대전','광주','포항','경주'];
+
+        for(let i =0; i<arr.length;i++){    //각 요소 출력
+            document.write(arr[i]+" ");
+        }
+        document.write('<br>');
+
+        for(const ar in arr){   //arr안에 있는 것을 ar로 담겠다.(인덱싱을 뽑음 -> 키를 가져올 수 있음), 알아서 처음부터 다 가져옴
+            document.write(ar + " "); //키(인덱스)를 뽑아냄
+            document.write(arr[ar] + " ");  //요소를 출력
+        }
+        document.write('<br>');
+
+        for(const ar of arr){             
+            document.write(ar + " ");   //요소를 출력
+        }
+    </script>
+</body>
+</html>

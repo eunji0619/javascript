@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>While 반복문</title>
+</head>
+<body>
+    <script>
+        const arr = ['서울','부산','대구','대전','광주','포항','경주'];
+        let i = 0;
+
+        // while(confirm('계속할까용?')){
+        //     i+=1;   //i++;
+        //     alert(`${i}번째 반복입니다.`);
+        // }
+
+        while(i < arr.length){
+            console.log(`%c ${i} : ${arr[i]}`, 'color:blue');
+            i+=1;   //i++;
+        }
+
+        for(let i =0; i<arr.length;i++){ 
+            console.log("%c"+i +" : "+ arr[i]+" ",'color:red');
+        }
+        for(const ar in arr){
+            console.log(ar + " : " + arr[ar] + " ");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>369게임</title>
+</head>
+<body>
+    <script>
+        // list ='';
+        // for(let i = 1; i<=300; i++){
+        //     if(i%15==0){
+        //         list+=`<big>와우</big> `;
+        //     }
+        //     else if(i%5==0){
+        //         list+='<mark>wow</mark> ';
+        //     }
+        //     else if(i%3==0){
+        //         list+='짝 ';
+        //     }
+        //     else{
+        //         list +=`${i} `;
+        //     }
+        // }
+        // document.write(list);
+        list ='';
+        list+='<table border><tr>';
+            for(let i = 1; i<=300; i++){
+                list+='<td>';
+                if(i%5==0&&i%3==0){
+                    list+=`<mark>와우</mark> `;
+                    list+='</td></tr>'
+                }
+                else if(i%5==0){
+                    list+='<big>wow</big> ';
+                }
+                else if(i%3==0){
+                    list+='짝 ';
+                }
+                else{
+                    list +=`${i} `;
+                }
+            }
+        list+='</tr></table>';
+        document.write(list);
+    </script>
+</body>
+</html>

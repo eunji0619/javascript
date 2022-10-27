@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>break / continue</title>
+</head>
+<body>
+    <script>
+        /* for 구문 break로 빠져나오기 */
+        // for(let i =0; ; i++){   //비워두는것은 생략하는것 = 무한 반복
+        //     alert('반복문');
+
+        //     const isContinue = confirm('계속 하시겠습니까?');
+        //     if(!isContinue){
+        //         break
+        //     }
+        // }   
+
+        /* for 구문 continue로 넘어가기 */
+        // for(let i=0; i<5; i++){
+        //     //현재 작업 중지하고 다음 반복작업 수행
+        //     continue;
+        //     alert(i);
+        // }
+
+        /* continue를 이용한 넘기기*/
+        let output = 0;
+        for(let i = 1; i<=10; i++){
+            if(i%2==1){
+                continue;
+            }
+            output+=i;
+            document.write(i+ " ")
+        }
+        document.write("<br>"+output);
+    </script>
+</body>
+</html>

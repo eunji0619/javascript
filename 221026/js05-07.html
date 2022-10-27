@@ -1,38 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>예제</title>
 </head>
 <body>
     <script>
-        /*임의의 수*/
+        /*숫자 맞추기 while */
         // let num;
         // let random = parseInt(Math.random()*100+1);
-        // let count=7;
+        // let count=5;
 
         // while(count){
         //     num = Number(prompt('숫자를 입력해주세요'));
 
-        //     if(num > random){
-        //         count --;
-        //         alert(`이거 보다 작음. 남은 기회 ${count}`);
+        //     if(num == random){
+        //         alert(`${5-count}번 만에 정답!!`);
+        //         break;
+        //         
         //     }
         //     else if(num < random) {
         //         count --;
         //         alert(`이거 보다 큼. 남은 기회 ${count}`);
         //     }
         //     else{
-        //         alert(`${7-count}번 만에 정답!!`);
-        //         break;
+        //         count --;
+        //         alert(`이거 보다 작음. 남은 기회 ${count}`);
         //     }
         //     document.write('끝')
         // }
-         
-        let comc=userc=ct=0;
         
+        /*숫자 맞추기 for */
+        // let num;
+        // let random = parseInt(Math.random()*100+1);
+        // let count =0;
+        // for(;count<5;){
+        //     num = Number(prompt('숫자를 입력해주세요'));
+        //     if(num == random){
+        //         count++;
+        //         alert(`${count}번 만에 정답!!`);
+        //         break;
+        //     }
+        //     else if(num < random) {
+        //         count ++;
+        //         alert(`${count}번째 시도. \n 이거 보다 큼. `);
+        //     }
+        //     else{
+        //         count ++;
+        //         alert(`${count}번째 시도. \n 이거 보다 작음.`);
+        //     }
+        // }
+        // document.write('모든 횟수를 다 사용 했오 - 끝');
+         
+        /* 가위 바위 보 */
+        let comc = userc = ct = 0;
+        let com = ['가위','바위','보']
+        let ran = 0;
         while(1){
-            let ran = parseInt(Math.random()*3) // 0~2 랜덤선정
-            let com = ['가위','바위','보']
+            ran = parseInt(Math.random()*3) // 0~2 랜덤선정
             const user = prompt('가위,바위,보,그만 중 하나를 입력하세요.')
             if (com[ran]==user){
                 ct++ // 게임 수
@@ -52,6 +76,56 @@
             // 어래이로 도전해보기
         }
         document.write('이용해 주셔서 감사합니다!')
+
+        /* 주사위 확률 */
+        // let dice = d1 = d2 = d3 = d4 = d5 = d6 = 0;
+        // console.time();
+        // let er =0;
+        // for(let i=0; i<1000000; i++){
+        //     dice = Math.floor(Math.random()*6+1);    //Math.floor() = 소수점 이하 버림
+        //     //dice = parseInt(Math.random()*6+1); 
+        //     if(dice==1)d1++;
+        //     else if(dice==2)d2++;
+        //     else if(dice==3)d3++;
+        //     else if(dice==4)d4++;
+        //     else if(dice==5)d5++;
+        //     else if(dice==6)d6++;
+        //     else{er++;}
+        // }
+        // document.write('1의 개수 :' + d1 +'<br>'
+        //                 +'2의 개수 :' + d2 +'<br>'
+        //                 +'3의 개수 :' + d3 +'<br>'
+        //                 +'4의 개수 :' + d4 +'<br>'
+        //                 +'5의 개수 :' + d5 +'<br>'
+        //                 +'6의 개수 :' + d6 +'<br>'
+        //                 +'total : ' + (d1 + d2 + d3 + d4 + d5 + d6) + '\t에러' + er);
+        // console.timeEnd();
+        
+        /* 주사위 확률 조작 - 3번이 많이 나오게*/
+    //     console.time()
+    //     let dice = d1 = d2 = d3 = d4 = d5 = d6 = er = lucky = 0;
+    //     let my = 4;        
+   
+    //     for(let i=0;i<1000000;i++){
+    //     lucky = Math.floor(Math.random()*100)+1;
+    //     dice = Math.floor(Math.random()*6)+1;
+
+    //     if(dice==1){if(lucky<=my){d3++}else{d1++}}
+    //     else if(dice==2){if(lucky<=my){d3++}else{d2++}}
+    //     else if(dice==3){d3++}
+    //     else if(dice==4){if(lucky<=my){d3++}else{d4++}}
+    //     else if(dice==5){if(lucky<=my){d3++}else{d5++}}
+    //     else if(dice==6){if(lucky<=my){d3++}else{d6++}}
+    //     else{er++;}
+    // }
+    // document.write('주사위 1의 개수:'+d1+'<br>'
+    //                 +'주사위 2의 개수:'+d2+'<br>'
+    //                 +'주사위 3의 개수:'+d3+'<br>'
+    //                 +'주사위 4의 개수:'+d4+'<br>'
+    //                 +'주사위 5의 개수:'+d5+'<br>'
+    //                 +'주사위 6의 개수:'+d6+'<br>'+'토탈'+(d1+d2+d3+d4+d5+d6)+'번'+' /에러:'+er)
+
+    // console.timeEnd()
 
     </script>
 </body>

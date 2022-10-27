@@ -5,10 +5,47 @@
 </head>
 <body>
     <script>
-        // let output='';
 
+        /*직각 삼각형 1 */
+        // let output='';
         // for(let i = 0; i<10; i++){
-        //     for(let j =0; j<i;j++){
+        //     for(let j =0; j<i+1;j++){
+        //         output+='*';
+        //     }
+        //     output+='\n';
+        // }
+        // console.log(output);
+
+        /*직각 삼각형 2 */
+        // let output ='';
+        // for(let i =0; i<10; i++){
+        //     for(let j =10; j>i+1; j--){
+        //         output+=' ';
+        //     }
+        //     for(let k=0; k<i+1;k++){
+        //         output+='*';
+        //     }
+        //     output+='\n';
+        // }
+        // console.log(output);
+
+        /* 꺼꾸로 직각 삼각형*/
+        // let output ='';
+        // for(let i =0; i<10;i++){
+        //     for(let j=0; j<i ;j++){
+        //         output+=(' ');
+        //     }
+        //     for(let k=10; k>i; k--) {
+        //         output+=('*');
+        //     }
+        //     output+='\n';
+        // }
+        // console.log(output);
+
+        /*정사각형*/
+        // let output ='';
+        // for(let i =0; i<10; i++){
+        //     for(let j=0; j<10; j++){
         //         output+='*';
         //     }
         //     output+='\n';
@@ -18,10 +55,10 @@
         /*정삼각형*/
         // let output='';
         // for(let i = 0; i<15; i++){
-        //     for(let j = 15; j>i; j--){
+        //     for(let j = 15; j>i+1; j--){
         //         output+=' ';
         //     }
-        //     for(let k = 0; k < 2*i-1; k++){
+        //     for(let k = 0; k < 2*i+1; k++){
         //         output+='*';
         //     }
         //     output+='\n';
@@ -30,8 +67,8 @@
 
         /*마름모*/
         let output='';
-        for(let i = 0; i<15; i++){
-            for(let j = 15; j>i; j--){
+        for(let i = 0; i<5; i++){
+            for(let j = 5; j>i+1; j--){
                 output+=' ';
             }
             for(let k = 0; k < 2*i-1; k++){
@@ -40,21 +77,16 @@
             output+='\n';
         }
         
-        for(let i = 0; i<15;i++){
-            for(let j = 0; j<=i+1; j++){
+        for(let i = 0; i<5;i++){
+            for(let j = 0; j<=i; j++){
                 output+=' ';
             }
-            for(let k=15; k>=2*i-9; k--){
+            for(let k=5; k>=2*i+1; k--){
                 output+='*';
             }
             output+='\n';
         }
         console.log(output);
-
-        /*직각 삼각형*/
-        // let output ='';
-
-
     </script>
 </body>
 </html>

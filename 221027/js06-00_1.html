@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>배열처리</title>
+</head>
+<body>
+    <script>
+        // const strA= '사과/배/바나나/귤/수박/복숭아';
+        // const strA= '55/22/77/44/11/66/33/88';
+        // let result = strA.split("/");        //문자열을 기호를 기점으로 배열으로 변환
+        let result = [111,12,2,23,5,78,456,24];
+        console.log(result);
+        last = result.join(',');                //배열을 기호를 기점으로 문자열로 반환
+
+        /*파괴*/
+        //let last = result.shift();                //뭘 꺼냇는지도 확인가능(맨 앞 요소 제거)
+        // let last = result.unshift('마마무');      //처음 요소 추가
+        //let last = result.pop();                  //원본에 손상이 감(맨마지막 요소 제거)
+        // let last = result.push('일낼라');           //마지막 요소 추가
+        // last = result.sort();
+        
+        /*비파괴*/
+        // last = result.slice(3,4);       //값을 출력하는 것
+        // last = result.join('/');                //배열을 기호를 기점으로 문자열로 반환
+
+        console.log(last);
+        console.log(result);
+    </script>
+</body>
+</html>

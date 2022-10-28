@@ -5,19 +5,58 @@
 </head>
 <body>
     <script>
-        let lotto = [];
-        for(let i =0; i<6; i++){
-            lotto[i] = parseInt(Math.random()*45+1);
+        // let lotto = [];
+        // for(let i =0; i<6; i++){
+        //     lotto[i] = parseInt(Math.random()*45+1);
             
-            for(let j= 0; j<i; j++){
-                if(lotto[i]==lotto[j]){
-                    i--;
+        //     for(let j= 0; j<i; j++){
+        //         if(lotto[i]==lotto[j]){
+        //             i--;
+        //         }
+        //     }
+        // }
+            // for(let i = 0; i< 45; i++){
+            //     count[lotto[i]]++;
+            // }
+            
+            // for(let i = 1; i<=45; i++){
+            // console.log( i + '의 갯수는 : ' + count[i]);
+            // }
+
+        // lotto.sort(function(a,b){return a-b});
+        // console.log(lotto);
+
+        let count = [];
+
+        for(let i =1; i<=45; i++){
+            count[i]=0;
+        }
+
+        let lotto = [];
+        for(let k =0; k<10000;k++){
+            for(let i =0; i<6; i++){
+                lotto[i] = parseInt(Math.random()*45)+1;
+            
+                for(let j= 0; j<i; j++){
+                    if(lotto[i]==lotto[j]){
+                        i--;
+                    }
                 }
             }
-            
+        
+            for(let i = 0; i< 45; i++){
+                count[lotto[i]]++;
+            }
+            document.write( k+1 + '번째 : '+ lotto + "<br>");
         }
-        lotto.sort(function(a,b){return a-b});
-        console.log(lotto);
+
+
+        for(let i = 1; i<=45; i++){
+            console.log( i + '의 갯수는 : ' + count[i]);
+        }
+
+        // lotto.sort(function(a,b){return a-b});
+    
 
     </script>
 </body>

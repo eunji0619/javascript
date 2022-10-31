@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            border-collapse: collapse;
+        }
+        tr:nth-child(2n+1){
+            background-color: beige;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -51,13 +60,33 @@
         }
 
 
-        for(let i = 1; i<=45; i++){
-            console.log( i + '의 갯수는 : ' + count[i]);
-        }
+        // for(let i = 1; i<=45; i++){
+        //     console.log( i + '의 갯수는 : ' + count[i]);
+        // }
 
         // lotto.sort(function(a,b){return a-b});
+        // lotto.sort((a,b)=>{a-b});        //b-a는 역순
     
+        let a=1;
+        let list1="";
+        list1+='<table border>';
+        for(let i = 0; i<5*2; i++){
+            list1+='<tr>';
 
+            if(i%2==0){
+                for(let j = 0; j<10; j++){
+                    list1+=`<td>${a++} </td>`;
+                }
+            }
+            else{
+                for(let j = 0; j<10; j++){
+                    list1+=`<td> ${count[j+1]} </td>`;
+                }
+            }
+            list1+='</tr>';
+        }
+        list1+='</table>';
+        document.write(list1);
     </script>
 </body>
 </html>

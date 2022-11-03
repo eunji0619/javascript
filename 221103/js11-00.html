@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>전역변수(global), 지역변수(local)</title>
+</head>
+<body>
+    <h1>같은 이름의 전역변수와 지역변수</h1>
+    <script>
+        // var num = 100;
+        // function global(){
+        //     var num = 200;
+        //     document.write(`함수 내부에서 변수 값은 ? ${num}  `)
+        // }
+        // global()
+        // document.write(`호출이 끝난뒤 변수 값은 ? ${num}`)
+
+        // let num = 100;
+        // function global(){
+        //     let num = 200;
+        //     document.write(`함수 내부에서 변수 값은 ? ${num}  `)
+        // }
+        // global()
+        // document.write(`호출이 끝난뒤 변수 값은 ? ${num}`)
+
+        // /* 전역변수 변경 */
+        var num = 100;
+        function global(){
+            document.write(`함수 내부에서 변수 값은 ? ${num}  `)
+            num = 200;
+        }
+        global()
+        document.write(`호출이 끝난뒤 변수 값은 ? ${num}`)
+
+        // /* 전역변수 ? - 권장 사항이 XX */
+        // function global(){
+        //     num = 200;  //전역변수로 설정이 되었음
+        //     document.write(`함수 내부에서 변수 값은 ? ${num}  `)
+        // }
+        // global()
+        // document.write(`호출이 끝난뒤 변수 값은 ? ${num}`)
+    </script>
+</body>
+</html>

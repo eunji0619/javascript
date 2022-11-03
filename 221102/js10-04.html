@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="lot(45,6)">로또 추첨</button>
+    <script>
+        function lot(num,set){
+            let lotto = [];
+            for(let i = 0; i<set;i++){
+                lotto[i] = Math.floor(Math.random()*num)+1;
+            }
+            // return lotto;
+            document.write(lotto);
+        }
+    </script>
+</body>
+</html>

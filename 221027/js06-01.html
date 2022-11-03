@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <title>Document</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>    
     <style>
         table{
             text-align: center;
             border-collapse: collapse;
+            
         }
         tr:nth-child(2n+1){
             background-color: beige;
@@ -13,30 +15,12 @@
     </style>
 </head>
 <body>
+    <div id="chart_div"></div>
     <script>
-        // let lotto = [];
-        // for(let i =0; i<6; i++){
-        //     lotto[i] = parseInt(Math.random()*45+1);
-            
-        //     for(let j= 0; j<i; j++){
-        //         if(lotto[i]==lotto[j]){
-        //             i--;
-        //         }
-        //     }
-        // }
-            // for(let i = 0; i< 45; i++){
-            //     count[lotto[i]]++;
-            // }
-            
-            // for(let i = 1; i<=45; i++){
-            // console.log( i + '의 갯수는 : ' + count[i]);
-            // }
-
-        // lotto.sort(function(a,b){return a-b});
-        // console.log(lotto);
-
+        /*로또 숫자 뽑기 + 만번 돌려서 목록 출력*/
         let count = [];
-
+        let result ='';
+        result +=`<div>`
         for(let i =1; i<=45; i++){
             count[i]=0;
         }
@@ -56,17 +40,13 @@
             for(let i = 0; i< 45; i++){
                 count[lotto[i]]++;
             }
-            document.write( k+1 + '번째 : '+ lotto + "<br>");
+            // document.write( k+1 + '번째 : '+ lotto + "<br>");
+            result+=`${k+1}번째 : ${lotto} <br>`
         }
+        result +=`</div>`
 
 
-        // for(let i = 1; i<=45; i++){
-        //     console.log( i + '의 갯수는 : ' + count[i]);
-        // }
-
-        // lotto.sort(function(a,b){return a-b});
-        // lotto.sort((a,b)=>{a-b});        //b-a는 역순
-    
+        /* 표 */
         let a=1;
         let list1="";
         list1+='<table border>';
@@ -79,14 +59,64 @@
                 }
             }
             else{
-                for(let j = 0; j<10; j++){
-                    list1+=`<td> ${count[j+1]} </td>`;
+                for(let j = 1; j<=10; j++){
+                    list1+=`<td> ${count[j]} </td>`;
                 }
             }
             list1+='</tr>';
         }
         list1+='</table>';
-        document.write(list1);
+        document.write(list1 + '<br>');
+        document.write(result);
+
+        // for(let i = 1; i<=45; i++){
+        //     console.log( i + '의 갯수는 : ' + count[i]);
+        // }
+
+        // lotto.sort(function(a,b){return a-b});
+        // lotto.sort((a,b)=>{a-b});        //b-a는 역순
+
+
+        /* 그래프 */
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawBasic);
+
+        // const data_box = [
+        //         ['로또', '2022 로또분석표',],
+        //         ['New York City, NY', 8175000],
+        //         ['Los Angeles, CA', 3792000],
+        //         ['Chicago, IL', 2695000],
+        //         ['Houston, TX', 2099000],
+        //         ['Philadelphia, PA', 1526000]
+        //     ]
+
+        const data_box = []
+        data_box.push(['로또','로또분석'])
+            for(let i=1; i<=45;i++){
+                data_box.push([i +"번",count[i]])
+            }
+
+        function drawBasic() {
+
+            var data = google.visualization.arrayToDataTable(data_box);
+
+            var options = {
+                title: '로또 번호 확률 분석',
+                chartArea: {width: '50%',/* height: '100%'*/},
+                hAxis: {
+                title: '번호 출현 개수',
+                minValue: 0
+                },
+                vAxis: {
+                title: '로또번호통계'
+                }
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+            }
+
     </script>
 </body>
 </html>

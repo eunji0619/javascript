@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>익명함수, 무명함수</title>
+</head>
+<body>
+    <script>
+        let vadd = function(a, b){
+            return a+b;
+        }
+        console.log(vadd(5,10));
+        console.log(typeof(vadd(5,10)));
+        console.log(typeof(vadd));
+
+        let vadd2 = function(a,b){
+            return a+b+b;
+        }
+        console.log(vadd2(5,10));
+        console.log(typeof(vadd2(5,10)));
+        console.log(typeof(vadd2));
+
+        let vadd3 = (function(a,b){
+            return a+b+b;
+        })(5,10)
+        console.log(typeof(vadd3));
+        </script>
+</body>
+</html>

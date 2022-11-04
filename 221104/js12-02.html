@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        arr = [2,12,33,1,35];
+        let temp = arr[0];
+        
+        function min(... items){    //같이 쓰려면 매개변수 + 나머지 매개변수 or 나머지매개변수 하나로 
+            let output = items[0];
+            for(let min of items){
+                if(output > min){
+                    output=min;
+                }
+            }
+            return output;
+        }
+        // console.log(min(arr));
+        console.log(min(1,12,33,1,35));
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function min(first, ...rests){
+            let output; 
+            let items;
+
+            console.log('첫줄'+first)
+            console.log(typeof(first))  //object 
+            console.log(Array.isArray(first))   //배열이니 ? = true
+            console.log(Array.isArray(first[0]))    //false 
+            
+            console.log('두번째줄'+rests)
+            console.log(typeof(rests))  //숫자
+            console.log(Array.isArray(rests))   //false
+            console.log(Array.isArray(rests[0]))    //false
+
+        if(Array.isArray(first)){   //배열이 맞는지 확인해주는것 Array.isArray
+            output = first[0];
+            items = first //배열을 items에 삽입
+        }
+        else if(typeof(first)==='number'){  //타입까지 같은지 비교 ===
+            output = first; //first = 66이 먼저들어가고 나머지는 배열로 
+            items = rests   //배열값이 items에 들어감
+        }
+        for(const item of items){       //min찾기
+            if(output>item){
+                output = item
+            }
+        }
+        return output
+    }
+    // console.log('배열'+min([66,54,33,11,22,33,44]))      배열
+    console.log(`숫자 ${min(66,54,33,11,22,33,44)}`)        //숫자 값들
+    </script>
+</body>
+</html>

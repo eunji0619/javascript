@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>자료형에 따른 함수 동작</title>
+</head>
+<body>
+    <script>
+        function min(...rests){ //
+            let output;
+            let items;
+
+            console.log('첫줄'+rests)
+            console.log(typeof(rests))  
+            console.log(typeof(rests[0]))  
+            console.log(Array.isArray(rests))   
+            console.log(Array.isArray(rests[0]))    //[[12,23,44]]
+
+            if(Array.isArray(rests[0])){
+                output = rests[0][0];
+                items = rests[0];
+                console.log('배열이에오')
+            }
+            else if(typeof(rests[0])==='number'){
+                output = rests[0];
+                items = rests;
+                console.log('숫자에오')
+            }
+            for(const item of items){
+                if(output > item){
+                    output = item;
+                }
+            }
+            return output;
+        }
+        console.log(`배열 결과1 : ${min([55,66,222,33,11,32,68])}`)     //object, object, true, true, 배열이에오
+        // console.log(`숫자 결과2 : ${min(55,66,222,33,11,32,68)}`)    //object, number, true, false, 숫자에오
+    </script>
+</body>
+</html>

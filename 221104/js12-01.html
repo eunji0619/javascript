@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>나머지 매개변수</title>
+</head>
+<body>
+    <script>
+        function sample(...items){
+            console.log(items);
+        }
+        sample(1);  //배열로 입력받음
+        sample(1,2);
+        sample('ㅎㅇ');
+        sample([1,2,3]);
+        sample([[1,2],[4,5]]);  //
+        sample(4,5,6);
+    </script>
+</body>
+</html>

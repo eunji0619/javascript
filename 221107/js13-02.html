@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>arguments</title>
+</head>
+<body>
+    <script>
+        function sample(){
+            // console.log(arguments);      //배열이 아님 - 유사배열
+            // for(let i =0; i<arguments;  i++){
+            //     console.log(`${i}번째 요소 : ${arguments[i]}`);
+            // }
+                for( const out of arguments){
+                    console.log(`${Array.from(arguments).indexOf(out)}번째 요소 : ${out}`);
+                }   //유사배열이라 indexof가 동작하지 않아서 치신문법인 Array.from 을 사용함
+                console.log(typeof(arguments));
+                console.log(Array.isArray(arguments));
+        }
+        sample(1,2,3,4,5)
+    </script>
+</body>
+</html>

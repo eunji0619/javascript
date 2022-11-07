@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>콜백함수</title>
+</head>
+<body>
+    <script>
+        function lol(hero, level=1, callback=fire){ //비동기 프로그램
+            if(level >= 6){
+                //r skill
+                document.write(`${hero}가 궁극기를 시전하였습니다.`);
+                callback(level);
+            }
+            else{
+                document.write(`${hero}가 평타를 때립니다.`);
+            }
+
+            function fire(ff){
+                for(let i = 1; i<=ff; i++){
+                    document.write(`${i}번째 파이어를 ${i}개 던집니다.<br>`);
+                }
+            }
+            function ice(ii){
+                for(let i = 1; i<=ii; i++){
+                    document.write(`${i}번째 얼음송곳을 ${i*ii}개 던집니다.<br>`);
+                }
+            }
+            function slow(ss){
+                for(let i = ss; i >0; i--){
+                    document.write(`${ss-i}번째 때려서 ${i}% 느려집니다.<br>`);
+                }
+            }
+        }
+    </script>
+</body>
+</html>

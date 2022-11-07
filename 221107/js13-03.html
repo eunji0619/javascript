@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>구버전 apply() - 전개연산자 없던 시절</title>
+</head>
+<body>
+    <script>
+        let base = Math.max(13,14,58,34,65,77,23,54);
+        let arr1 = [13,14,58,34,65,77,23,54];
+        let result = Math.max(arr1);    //배열을 넣으면 NAN값이 나옴
+        console.log(result);
+
+        let result1 = Math.max(...arr1);
+        console.log(result1);
+
+        let result2 = Math.max.apply(null, arr1);   //apply함수 = 전개 연산자가 없을때 배열을 하나하나 풀어서 넣겠다는 뜻
+        console.log(result2);
+    </script>
+</body>
+</html>

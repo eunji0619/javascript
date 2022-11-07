@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>전개 연산자를 이용한 복사</title>
+</head>
+<body>
+    <script>
+        /* 원본이 파괴됨 */
+        // const arr1 = [33,222,11,33,66,43];
+        // const arr2 = arr1.reverse();
+        // console.log('arr1 : ' + arr1);
+        // console.log('arr2 : ' + arr2);
+        
+        /*깊은 복사로 원본 보존*/
+        const arr1 = [33,222,11,33,66,43];
+        const arr2 = [...arr1].reverse();
+        console.log('arr1 : ' + arr1);
+        console.log('arr2 : ' + arr2);
+        
+
+    </script>
+</body>
+</html>

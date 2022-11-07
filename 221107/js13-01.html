@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>기본 매개변수</title>
+</head>
+<body>
+    <script>
+        function earnings(name, wage = 9160, hours = 40){
+            console.log(`# ${name} 님의 급여 정보`);
+            console.log(` - 시급 : ${wage}원`);
+            console.log(` - 근무 시간 : ${hours} 시간`);
+            console.log(` - 급여 : ${wage * hours} 원`);
+            console.log(` - 월급 : ${wage * hours * 4} 원`);
+            console.log(``);
+            
+            return (`# ${name} 님의 급여 정보 <br>
+                    - 시급 : ${wage}원 <br>
+                    - 근무 시간 : ${hours} 시간 <br>
+                    - 급여 : ${wage * hours} 원 <br>
+                    - 월급 : ${wage * hours * 4} 원`)
+        }
+
+        function isLeapYear(year = new Date().getFullYear){
+            console.log(`매개변수 year : ${year}`);
+            return year % 4 ===0 && year % 100 !==0 || year % 400 === 0;
+        }
+        console.log(`올해는 윤년일까 ??? ${isLeapYear()}`);
+
+        
+    </script>
+</body>
+</html>

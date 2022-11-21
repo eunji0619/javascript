@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>즉시 실행 함수 - 객체</title>
+</head>
+<body>
+    <script>
+        const COUNTER = (function(){
+            let curr = 0;   //var, let 선언시 외부에서 접근 불가
+            return {
+                getCurrentValue: function(){    //속성 (= 이름) : 값(내용)  
+                    return curr;
+                },
+                increaseValue: function(){
+                    curr++;
+                    return curr;
+                },
+                decreaseValue: function(){
+                    curr--;
+                    return curr;
+                }
+            };
+        })()
+        console.log(COUNTER.curr);  //private하게 객체의 속성을 보호해줌 - 접근 불가
+        console.log(COUNTER.getCurrenValue());  //Closure 현상을 통해 curr의 값을 가져 올 수 있음.
+        console.log(COUNTER.increaseValue());
+        console.log(COUNTER.decreaseValue());
+
+        //221115 - 즉시실행함수, hoisting, 객체, closure현상
+    </script>
+</body>
+</html>

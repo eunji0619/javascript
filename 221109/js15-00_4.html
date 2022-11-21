@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reduce 메서드 응용</title>
+</head>
+<body>
+    <script>
+        const arr = Array(100).fill(0).map((v,i)=>v=i+1);
+        // console.log(arr)
+
+        /*mapping기능*/
+        // const arr_oe = arr.reduce((acc,cur)=>{
+        //     acc.push(cur%2? '짝수' : '홀수');
+        //     return acc;
+        // },[]) //acc = 최종결과의 누적값이 아닌 단계의 누적 값을 뜻함
+        // console.log(arr_oe);
+
+        // /*filter 기능*/
+        // const arr_fil = arr.reduce((acc,cur)=>{
+        //     if(cur>50) acc.push(cur);
+        //     return acc;
+        // },[])
+        // console.log(arr_fil);
+
+
+        //0~32 2씩 증가, 32~70 1씩증가 70~100 2씩 감소 
+        //홀수,짝수 배열하나 만들기 = {index}번째 {배열값}값은 {홀짝 내용}이다 형식으로 출력 = reduce사용
+        // const numarr = ;
+        const arr_oeoe = arr.reduce((acc,cur,idx)=>{
+            acc.push(cur%2==0 ? '짝' : '홀');
+            console.log(`${idx}번째${cur}값은 ${acc}이다.`)
+            return acc;
+        },[])
+    </script>
+</body>
+</html>

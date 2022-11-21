@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*20 ~ 90중 짝수  + 숫자는 35이상 + 10의배수를 출력*/
+        let numbers = [];
+        for(let i =20; i<=90; i++){
+            if(i%2===0) numbers.push(i);
+        }
+        numbers
+            .filter((value) => value > 35 && value %10 == 0)
+            .forEach((value)=>{console.log(value)})
+
+        
+        /*각 인덱스 문자열 길이 출력 + 6초과 길이를 가진 문자열 출력*/
+        let words = ['kiwi','orange','banana','exuberant','destruction','present']
+        let words_n = words.map((value) => value.length)
+        console.log(words_n)
+
+        words
+            .filter((value) => value.length > 6)
+            .forEach((value)=>{console.log(value)})
+        
+    </script>
+</body>
+</html>

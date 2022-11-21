@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>★★★화살표 함수를 사용한 메소드(p.252)★★★</title>
+</head>
+<body>
+    <script>    
+        const test ={
+            a : function(){
+                setTimeout(function(){  //function을 가리킴
+                    console.log(this);      
+                },500)
+            },
+            b : function(){ 
+                setTimeout(() =>{   //test라는 객체를 가리킴
+                console.log(this);  //화살표 함수를 메소드로 사용하지 XX
+                },0)    //settime이면 무조건 비동기, 0초여도 버퍼링?이 있음
+            },
+            마마무 : '솔문휘화'
+        }
+        test.a();   //Object 
+        test.b();   //Window
+    </script>
+</body>
+</html>

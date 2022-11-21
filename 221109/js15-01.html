@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>예제</title>
+</head>
+<body>
+    <script>
+        //33 ~ 70 숫자 배열 + [홀수,짝수,홀수...]으로 홀짝 분류된 배열
+        let arr=[];
+        let arr1=[];
+        for(let i =33; i<=70; i++){
+            arr.push(i);
+        }
+        /*map, 삼항연산자*/
+        arr1 = arr.map(value => value % 2==0 ? value ='짝수' : value ='홀수');
+        arr.forEach((v,i)=>console.log(`${i} 번째 수는 ${value} 이고 ${arr1[i]}이다`))
+        
+        /*map방식*/
+        // arr.map((value,i)=>{
+        //     if(value%2==0){
+        //         arr1[i]='짝수'
+        //         }
+        //     else{
+        //         arr1[i]='홀수'
+        //     }})
+
+        // 0~32 2씩 증가 32~70 1씩 증가 70~100 2씩 감소
+        // Array(101).fill(0).map((value,index,array)=>{
+
+        // })
+
+        
+    </script>
+</body>
+</html>

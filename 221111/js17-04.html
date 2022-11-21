@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>익명함수와 선언적 함수</title>
+</head>
+<body>
+    <script>
+        선언적함수();   //hoisting
+        function 선언적함수(){
+            console.log('1번째 선언적 함수입니다.');
+        }
+        function 선언적함수(){
+            console.log('2번째 선언적 함수입니다.');
+        }
+        
+        // console.log(foo1);
+        // let foo1 = 10;   //let일경우 hoisting 안댐
+        console.log(foo2);
+        var foo2 = 10;   //var일경우 선언은 hoisting됨, 할당은 hoisting안됨
+        var foo2;           //밑에 var선언이 있을경우 hoisting이 됨(let선언 X -> hoisting이 안됨)
+        let foo2;
+        // console.log(foo2);
+    </script>
+</body>
+</html>

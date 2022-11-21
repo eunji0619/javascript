@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>콜백함수 - 선언적 함수 / 익명 함수</title>
+</head>
+<body>
+    <script>
+        /*선언적 함수*/
+        function callThreeTimes(callback){
+            for(let i =0; i<3; i++){
+                callback(i);
+            }
+        }
+        function print (i){
+            console.log(`${i}번째 함수 호출`);
+        }
+
+        callThreeTimes(print);
+
+        /*익명 함수*/
+        function callThreeTimes(callback){
+            for(let i =0; i<3; i++){
+                callback(i);
+            }
+        }
+
+        callThreeTimes(function (i){
+            console.log(`${i}번째 함수 호출`);
+        })
+    </script>
+</body>
+</html>

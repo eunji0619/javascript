@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>reduce</title>
+</head>
+<body>
+    <script>
+        // const arr = [1,2,3,4,5]
+        // arr.reduce((acc,cur,idx,ary)=> console.log(acc,cur,idx,ary),def)
+        //reduce(funcion(accmulator,currentValue,index,array))
+        const arr = Array(100).fill(0).map((v,i)=>v=i+1);
+        console.log(arr);
+
+        let sum = arr.reduce((acc,cur,idx,ary)=>{   //acc는 누적값, cur는 현재값, idx는 인덱스, ary는 array
+            console.log(acc,cur,idx,ary);
+            return acc + cur
+        },0/*[]*/);   //초기값을 0으로 줌 중요!!! 배열을 넣을수도 있음
+        console.log(sum);
+        
+        //reduce(함수, 초기값)
+    </script>
+</body>
+</html>

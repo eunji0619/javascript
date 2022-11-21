@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr = [343,77,11]
+        // arr.forEach(function(value,index,array){
+        //     console.log(value,index,array)
+        // })       
+        // arr.forEach(console.log) // 위랑 같은 내용.
+
+        arr.map(function(value,index,array){
+            console.log(value,index,array)
+        })        
+        // arr.map(console.log) // 위랑 같은 내용
+
+
+        
+        let numbers = [273,52,103,32,57];
+        numbers = numbers.map(function (value){
+            return value*value;
+        })
+        numbers.forEach(console.log)
+    </script>
+</body>
+</html>

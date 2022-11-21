@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>즉시 실행 함수</title>
+</head>
+<body>
+    <h1> 즉시 실행 함수</h1>    
+    <script>
+        (function(){
+            console.log('즉시 실행함수1');
+        })();
+        // 즉시 실행 함수는 선언과 동시에 호출되어 한번밖에 사용 X
+        // 즉시 실행 함수 = 단 한번의 사용이 필요한 함수
+        (()=>{
+            console.log('즉시 실행함수2');
+        })();
+
+        /* 즉시 실행 함수의 장점 */
+        //필요없는 전역변수의 생성을 줄일 수 있다.
+        //private(자신만 사용하는)한 변수를 만들 수 있다.
+
+        let isAdult;
+        (function(age){
+            let currentAge = age;
+            if(age >=20){
+                isAdult = true;
+            }
+            else{
+                isAdult = false;
+            }
+            //isAdult = (age >=20) ? true : false;
+        })()
+
+        console.log(isAdult);
+        console.log(currentAge); 
+        //즉시 실행 함수를 사용하면 변수의 전역사용의 남발을 막을 수 있다. - 장점1
+    </script>
+</body>
+</html>

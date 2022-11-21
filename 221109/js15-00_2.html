@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>화살표함수</title>
+</head>
+<body>
+    <script>
+        arr = [1,2,3,4,5];
+        arr.forEach(v => console.log(v))
+        arr.forEach((v,i) => console.log(v))
+        arr.forEach(() => console.log('반복중'))    //length 만큼 순회
+        arr.forEach((_,i) => console.log('반복중'))    
+        // _ 언더바 암묵적 불필요(충돌가능성 있음)  = _는 매개변수가 있긴있는데 i만 사용하니가 무시해라
+        //from - 유사배열 -> 배열
+    </script>
+</body>
+</html>

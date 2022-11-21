@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>객체</title>
+</head>
+<body>
+    <script>
+        // 배열 []      객체 {name : '홍길동', age : 30} 
+        // JSON{"name" : "홍길동", "age" : "30"} --json에서는 주석, 함수 불가!! 오직 데이터만 들어가야함
+        // 객체 : Object    속성 : property     메소드 : method(객체 내 함수)
+        // CRUD : 생성, 읽기, 수정, 삭제
+        // 프로토타입 ex. 유전자
+        const pet ={
+            name : '구름',
+            // eat : function(food){
+            eat (food){
+                alert(this.name + '은/는 ' + food + '을/를 먹습니다.');
+            }
+        }
+        pet.eat('밥');
+    </script>
+</body>
+</html>

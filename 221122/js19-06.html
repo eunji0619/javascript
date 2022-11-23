@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+        <script>
+            document.addEventListener('DOMContentLoaded',()=>{
+                let list = text =>`<h1>${text}</h1>`
+                let a1 = document.body.querySelector('#a1')
+                let a2 = document.body.querySelector('#a2')
+                document.body.innerHTML += list('1번째 script 태그')
+                document.body.innerHTML += list('2번째 script 태그')
+                a1.innerHTML = '1번째 HTML 태그'                
+                document.body.innerHTML += list('3번째 script 태그')
+                a2.innerHTML = '2번째 HTML 태그'
+            })
+        </script>
+</head>
+<body>   
+   <h1 id="a1"></h1>
+   <h1 id="a2"></h1>   
+</body>
+</html>

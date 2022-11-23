@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        const rects = document.querySelectorAll('.rect');
+
+        Array.from(rects).reduce((acc,cur,idx)=>{
+            // const width = (idx + 1) * 100;
+            const width = (idx * 50) + 150;
+            const src = `https://placekitten.com/${width}/250`;
+            cur.src = src;
+        },0)
+    })
+</script>
+<body>
+    <!-- img.rect*5 -->
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">    
+    <img src="" alt="" class="rect">
+    <img src="" alt="" class="rect">
+</body>
+</html>

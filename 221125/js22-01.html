@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const div1 = document.createElement('div');
+            document.body.appendChild(div1);
+            const span1 = document.createElement('span');
+            const span2 = document.createElement('span');
+            div1.appendChild(span1);
+            div1.appendChild(span2);
+            div1.setAttribute('class','c1');
+            span1.textContent = '1. 문서객체 생성하기'
+            span2.textContent = '그리고 추가하기'
+
+            const div2 = document.createElement('div');
+            document.body.appendChild(div2);
+            const ul = document.createElement('ul');
+            const li1 = document.createElement('li');
+            const li2 = document.createElement('li');
+            const li3 = document.createElement('li');
+            div2.appendChild(ul);
+            ul.appendChild(li1);
+            ul.appendChild(li2);
+            ul.appendChild(li3);
+            div2.setAttribute('class','c2');
+            li1.textContent = '생성하고';
+            li2.textContent = '추가하고';
+            li3.textContent = '문서읽고';
+
+            const span3 = document.createElement('span');
+            document.body.appendChild(span3);
+            const a1 = document.createElement('a');
+            span3.appendChild(a1);
+            a1.href = 'www.naver.com';
+            a1.textContent = '네이버링크';
+            
+            const br = document.createElement('br');
+            document.body.appendChild(br);
+
+            const span4 = document.createElement('span');
+            document.body.appendChild(span4);
+            const a2 = document.createElement('a');
+            span4.appendChild(a2);
+            a2.href = 'www.daum.net';
+            a2.textContent = '다음링크';
+
+            // appendChild 는 return이 있음 appendChild(span).appendChild(a);
+            // append는 return이 없음
+            append(div1, div2, span1, br, span2)    //평행할때는append만 써서 가능
+            div1.appendChild(span1);
+            div1.appendChild(span2);
+            div2.appendChild(ul).append(li1,li2,li3);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

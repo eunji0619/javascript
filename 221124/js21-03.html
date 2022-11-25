@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<script>
+    document.addEventListener("DOMContentLoaded",()=>{
+        const div1 = document.createElement('div');
+        const h1 = document.createElement('h1');
+        document.body.appendChild(div1);
+        div1.appendChild(h1);
+        
+        div1.setAttribute('class','d1');
+        h1.textContent = '마마무 보고싶다아아아아.';
+        
+        const div2 = document.createElement('div');
+        const span = document.createElement('span');
+        document.body.appendChild(div2);
+        div2.appendChild(span);
+        
+        div2.setAttribute('class','d2');
+        span.style.color = 'blue';
+        span.setAttribute('id','s1');
+        span.textContent = '솔라 문별 휘인 화사'
+
+    })
+</script>
+<body>
+    
+</body>
+</html>

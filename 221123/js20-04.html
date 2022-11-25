@@ -1,26 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<script>
-    document.addEventListener("DOMContentLoaded",()=>{
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
         const rects = document.querySelectorAll('.rect');
-
-        Array.from(rects).reduce((acc,cur,idx)=>{
-            // const width = (idx + 1) * 100;
-            const width = (idx * 50) + 150;
-            const src = `https://placekitten.com/${width}/250`;
-            cur.src = src;
+        const fig = document.querySelectorAll('figcaption')
+        const lay = document.querySelectorAll('figure')                
+        
+        Array.from(rects).reduce((acc,cur,ind)=>{
+            console.log(cur)
+            const width = (ind*50)+150
+            const src = `http://placekitten.com/${width}/${width}`
+            cur.src = src // 주소값을 넣기
+            fig[ind].innerHTML = width +'x'+ width // 사이즈 달기
+            lay[ind].style.display = 'inline-block' // 그림을 붙이기
+            lay[ind].style.margin = 0 // 간격없애기
         },0)
-    })
-</script>
+
+        })
+    </script>
+</head>
 <body>
-    <!-- img.rect*5 -->
-    <img src="" alt="" class="rect">
-    <img src="" alt="" class="rect">
-    <img src="" alt="" class="rect">    
-    <img src="" alt="" class="rect">
-    <img src="" alt="" class="rect">
+    <div>
+    <!-- div>(figure>img.rect+figcaption)*5 -->
+    <div>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+        <figure>
+            <img src="" alt="" class="rect">
+            <figcaption></figcaption>
+        </figure>
+    </div>
+</div>
+   
 </body>
 </html>

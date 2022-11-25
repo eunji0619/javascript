@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>문서 객체 생성 / 이동하기</title>
+    <script>
+        // document.addEventListener("DOMContentLoaded",()=>{
+        //     const div1 = document.createElement("div");
+        //     const h1 = document.createElement("h1");
+        //     document.body.appendChild(div1);
+        //     div1.setAttribute('id','first');
+        //     div1.appendChild(h1);
+        //     h1.textContent='첫 번째 div 태그 내부'
+
+        //     const hr = document.createElement("hr");
+        //     document.body.appendChild(hr);
+
+        //     const div2 = document.createElement("div");
+        //     const h2 = document.createElement("h1");
+        //     document.body.appendChild(div2);
+        //     div2.appendChild(h2);
+        //     div2.setAttribute('id','second');
+        //     h2.textContent = '두 번째 div 태그 내부'
+            
+        //     const h3 = document.createElement("h1");
+        //     const div_on =_=>{
+        //         div1.appendChild(h3);
+        //         setTimeout(div2_on,1000);
+        //     }
+        //     const div2_on =_=>{
+        //         div2.appendChild(h3);
+        //         setTimeout(div_on,1000);
+        //     }
+        // })
+
+        document.addEventListener("DOMContentLoaded",()=>{
+            const div = document.createElement("div")
+            const div2 = document.createElement("div")
+            const h1 = document.createElement("h1")
+            div.innerHTML = '<h1>첫번째 div 태그</h1>'
+            div2.innerHTML = '<hr><h1>두번째 div 태그</h1>'
+            h1.innerHTML = '내부의 h1'
+            document.body.append(div,div2)
+
+            const div_on =_=>{
+                div.appendChild(h1)
+                setTimeout(div2_on ,1000)
+            }
+            const div2_on =_=>{
+                div2.appendChild(h1)
+                setTimeout(div_on ,1000)
+            }
+            div_on()
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
-</head>
-<body>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textContent 와 innerHTML </title>
     <script>
-        document.addEventListener("DOMContentLoaded",() =>{
-            const header1 = document.querySelector('#a1');
-            const header2 = document.querySelector('#a2');
-            window.console.log(header1);    //DOM, BOM 
-            window.console.log(header1);
-            header1.textContent = '<h1>이것은 textContent 내용입니다.<h1>';
-            header2.innerHTML = '<h1>이것은 innerHTML 내용입니다.<h1>';
+        /* innerText 는 사용안함 */
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const header1 = document.querySelector('#a1')
+            const header2 = document.querySelector('#a2')
+            window.console.log(header1)
+            window.console.log(header2)
+            header1.textContent = '<h1>이것은 textContent 내용입니다.</h1>'
+            header2.innerHTML = '<h1>이것은 innerHTML 내용입니다.</h1>'
         })
     </script>
-    
+</head>
+<body>
     <h1 id="a1"></h1>
     <h1 id="a2"></h1>
 </body>

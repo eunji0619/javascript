@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-</head>
-<script>
-    document.addEventListener("DOMContentLoaded",()=>{
-        const header = document.querySelectorAll('h1');
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const header = document.querySelectorAll('span')
+
+            header.forEach((v,i)=>{
+                
+                v.textContent = 'HEADERS '+(i+1)
+                v.style.magin = '10px'
     
-        header.forEach(v=>{
-            v.textContent = 'HEADERS';
-            v.style.color = '#fff';
-            v.style.backgroundColor = '#000';
-            v.style.padding = '10px';
+                if(i%2==0){
+                    v.style.color = 'white'
+                    v.style.backgroundColor = 'black'
+                }else{
+                    v.style.color = 'black'
+                    v.style.backgroundColor = 'yellow'
+                }
+            })
+
         })
-        
-    })
-</script>
+    </script>
+</head>
 <body>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
-    <h1></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
+   <h1><span></span></h1>
 </body>
 </html>

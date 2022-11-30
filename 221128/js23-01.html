@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이벤트 연결하기</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            let counter = 0;
+            const h1 = document.createElement('h1');
+            const bt1 = document.createElement('button');
+            const bt2 = document.createElement('button');
+            const p = document.createElement('p');
+
+            document.body.append(h1,bt1,bt2,p);
+            bt1.textContent = '이벤트 연결';
+            bt2.textContent = '이벤트 제거';
+
+            h1.textContent = `클릭 횟수 : 0`;
+            h1.style.userSelect = 'none';//드래그가 안되도록(파란 블록이 생기지 않도록)
+
+            h1.addEventListener('click',(event)=>{
+                h1.textContent = `클릭 횟수 : ${counter++}`;
+            })
+            bt1.addEventListener('click',()=>{
+                p.innerHTML='이벤트 연결 상태 : 연결'
+            });
+            bt2.addEventListener('click',()=>{
+                h1.removeEventListener('click',event);
+                p.innerHTML='이벤트 연결 상태 : 해제'
+            });
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>얌얌</title>
+    <script>
+        
+        document.addEventListener("DOMContentLoaded",()=>{
+            const div = document.createElement('div');
+            document.body.appendChild(div);
+            div.style.border = '1px solid black';
+            div.style.width = '300px';
+            div.style.height = '300px';
+
+            const circle = document.createElement('h1');
+            div.appendChild(circle);
+            circle.innerHTML = '●';
+            circle.style.position ='absolute';
+            
+            let randomx = Math.floor(Math.random());
+            let randomy = Math.floor(Math.random());
+            const block = 20;
+            const circle_print=_=>{
+                circle.style.left = `${randomx*block}px`
+                circle.style.top = `${randomy*block}px`
+            }
+            circle_print();
+
+            const star = document.createElement('h1');
+            div.appendChild(star);
+            star.innerHTML = '★'
+            star.style.position ='absolute';
+
+            let [x,y] = [0,0];
+            const star_print=_=>{
+                star.style.left = `${x*block}px`
+                star.style.top = `${y*block}px`
+            }
+            star_print();
+
+            const keys = {ArrowLeft : 37, ArrowUp : 38, ArrowRight : 39, ArrowDown : 40}
+            const {ArrowLeft : left, ArrowUp : up, ArrowRight : right, ArrowDown : down} = keys;
+            let check = 0;
+            document.body.addEventListener('keydown',event=>{
+                check = event.keyCode;
+                if(left===check)x -= 1;
+                if(up===check)y -= 1;
+                if(right===check)x += 1;
+                if(down===check)y += 1;
+                print();
+            })
+        })
+    </script>
+</head>
+<body>
+     <!-- 랜덤하게  '●' 가 출현
+            별이 가까이 가서 겹치면
+            점수 +1 이되고
+            '●' 는 또 다른 곳에 랜덤 출현 -->
+</body>
+</html>

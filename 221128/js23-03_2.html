@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>remove 기능 사용하기 문제2</title>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.createElement("h1");
+        const b1 = document.createElement("button");
+        const b2 = document.createElement("button");
+        const bx = document.createElement("button");
+        document.body.append(b1, b2, bx, h1);
+        b1.innerHTML = "동작버튼";
+        b2.innerHTML = "해제버튼";
+        bx.innerHTML = "잠금버튼(이벤트삭제)";
+        let isLock = false;
+
+        function eon() {
+          if (!isLock) {
+            setTimeout(() => {
+              document.body.append(h1);
+              h1.textContent = "안녕하세요. 반갑습니다.";
+            }, 3000);
+          }
+        }
+        function eoff() {
+          if (!isLock) {
+            setTimeout(() => {
+              document.body.removeChild(h1);
+            }, 3000);
+          }
+        }
+
+        b1.addEventListener("click", eon);
+        b2.addEventListener("click", eoff);
+        bx.addEventListener("click", () => {
+          if (isLock) {
+            b1.innerHTML = "동작버튼";
+            b2.innerHTML = "해제버튼";
+            bx.innerHTML = "잠금버튼(이벤트삭제)";
+            b1.addEventListener("click", eon);
+            b2.addEventListener("click", eoff);
+            console.log("이벤트등록됨");
+          } else {
+            b1.innerHTML = "버튼잠김";
+            b2.innerHTML = "버튼잠김";
+            bx.innerHTML = "잠금해제(이벤트등록)";
+            b1.removeEventListener("click", eon);
+            b2.removeEventListener("click", eoff);
+            console.log("이벤트삭제됨");
+          }
+          isLock = !isLock;
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <!-- 동작 버튼을 누르면
+        3초뒤 다음과 같은 글자가 나타난다.
+        '안녕하세요. 반갑습니다.' (h1 크기로)
+
+        해제 버튼을 누르면
+        3초뒤 다음 문구가 사라진다.
+        '안녕하세요. 반갑습니다.' (h1 태그도 사라지게)
+
+        잠금버튼을 누르면
+        동작버튼과 해제버튼이 눌러지지 않는다.
+        잠금버튼을 한번 더 누르면
+        동작버튼과 해제버튼이 동작가능하다.
+
+        현 상태를 나타내는 표현은 알아서 하시길... -->
+
+</body>
+</html>

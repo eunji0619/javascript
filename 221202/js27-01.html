@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 단위변환 프로그램</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const div = document.createElement("div");
+            const input1 = document.createElement("input");
+            const select1 = document.createElement("select");
+            const input2 = document.createElement("input");
+            const select2 = document.createElement("select");
+            document.body.appendChild(div).append(input1,select1,' = ',input2,select2);
+            // div.append(input,select);
+
+            const omenu = ['킬로미터','미터','센티미터','밀리미터','마이크로미터']
+            for(let menu of omenu){
+                let option = document.createElement("option");
+                select1.appendChild(option);
+                option.innerHTML = menu;
+            }            
+            for(let menu of omenu){
+                let option = document.createElement('option');
+                select2.appendChild(option);
+                option.innerHTML = menu;
+            }
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

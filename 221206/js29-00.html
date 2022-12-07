@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>타이핑효과</title>
+    <style>
+        :root{
+            --ti-cursor-margin-left : 0.1em;
+            --ti-cursor-color : lightblue;
+            color :cadetblue
+        }
+    </style>
+    <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded',()=>{
+            const h1 = document.createElement('h1');
+            document.body.appendChild(h1);
+            // h1.textContent ='mamamoo solar moonbyul wheein hwasa'
+            h1.textContent ='마마무 솔라 문별 휘인 화사'
+
+            new TypeIt(h1)
+                .pause(1000)
+                .delete(27,{delay:1000})
+                .type('moomoo')
+                .go();
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

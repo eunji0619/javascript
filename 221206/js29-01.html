@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const h3 = document.createElement("h3");
+            const hr = document.createElement("hr");
+            const span = document.createElement("span");
+            const pet =['강아지', '고양이', '햄스터', '토끼', '고슴도치', '기타'];
+
+            h3.textContent = '# 좋아하는 애완동물을 선택해주세요';
+            document.body.append(h3);
+
+            for(let list of pet){
+                const input = document.createElement("input");
+                input.type = 'radio';
+                input.name = 'pet';
+                input.value = list; 
+                document.body.append(input,list);
+
+                input.addEventListener('change',(event)=>{
+                    const check = event.currentTarget.value;    //const check = event.currentTarget;
+                    // console.log(check);
+                    span.textContent = `좋아하는 애완동물은 ${check}이시군요!`; //check.value
+                })
+            }
+            
+            document.body.append(hr,span);
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

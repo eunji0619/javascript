@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할일 목록 만들기</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const h1 = document.createElement("h1");
+            const input = document.createElement("input");
+            const button = document.createElement("button");
+            const div = document.createElement("div");
+            document.body.append(h1,input,button,div)
+            h1.innerHTML='할 일 목록'
+            button.innerHTML='추가하기'
+            
+            let inputData = null
+            input.addEventListener("keyup",(e)=>{
+                inputData = e.currentTarget.value
+            })
+            button.addEventListener('click',()=>{   
+                if(inputData){
+                    const ediv = document.createElement("div");
+                    const einput = document.createElement("input");
+                    const espan = document.createElement("span");
+                    const ebutton = document.createElement("button");
+                    einput.setAttribute("type","checkbox");
+                    espan.innerHTML = inputData
+                    ebutton.innerHTML = '제거하기'
+                    input.value = null
+                    inputData = null
+                    div.appendChild(ediv).append(einput,espan,ebutton)
+
+                    einput.addEventListener("click",(e)=>{
+                        ediv.style.textDecoration = e.currentTarget.checked?"line-through":''
+                    })
+
+                    ebutton.addEventListener("click",(e)=>{
+                        if(e.target)div.removeChild(ediv)
+                    })
+                }else{alert('값을 넣어주세요!!')}
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

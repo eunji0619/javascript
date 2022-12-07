@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크일때 링크 활성화</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            let timer=0;
+            const input = document.createElement('input');
+            const span = document.createElement('span');
+            const button = document.createElement('button');
+            const br = document.createElement('br');
+            const h1 = document.createElement('h1');
+            const a = document.createElement('a');
+            document.body.append(input, span, br,h1, button);
+            
+            input.setAttribute("type",'checkbox');
+            // a.setAttribute("href",'http://naver.com');
+            // span.textContent = '링크 활성화';
+            span.textContent = '타이머활성화';
+            button.textContent = '초기화';
+            h1.textContent = '0초'
+            // a.textContent = '네이버 이동';
+            input.addEventListener('change',(event)=>{
+                if(event.currentTarget.checked){
+                    document.body.appendChild(a);
+                    let count = 0;
+                    timer = setInterval(()=>{
+                        count+=1;
+                        h1.textContent = `${count} 초`;
+                    },1000)
+                }
+                else{
+                    h1.textContent = '0초';
+                    clearInterval(timer);
+                }
+            })
+            button.addEventListener('click',()=>{
+                    clearInterval(timer);
+                    h1.textContent = '0초';
+                    input.checked = false;
+            })
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

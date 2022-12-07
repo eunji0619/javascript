@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre><h2>
+        배열이 기록
+        배열에 요소 입력 
+        push
+        
+        배열에 요소 삭제
+        pop
+        로컬스토리지에 저장되고 삭제되도록 하라.
+        F5를 눌러도 값이 사라지지 않는다.
+    
+        추가사항 : 
+        모든 요소 삭제 버튼 한개
+        중복 제거 버튼 한개
+    </h2></pre>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const input = document.createElement("input");
+            const bt1 = document.createElement("button");
+            const bt2 = document.createElement("button");
+            const bt3 = document.createElement("button");
+            const bt4 = document.createElement("button");
+            const br = document.createElement("br");
+
+            bt1.textContent = '요소 삽입';
+            bt2.textContent = '요소 삭제';
+            bt3.textContent = '모두 삭제';
+            bt4.textContent = '중복 제거';
+
+            document.body.append(input,br,bt1,bt2,bt3,bt4);
+          
+            bt1.addEventListener('click',(event)=>{
+                const value = input.value;
+                localStorage.setItem('input',value);
+            })
+            bt3.addEventListener("click", (event)=>{
+                localStorage.clear()
+                input.value = ''
+            })
+        })
+    </script>
+</body>
+</html>

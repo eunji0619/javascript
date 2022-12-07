@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 샐렉트 2</title>
+    <script>
+        document.addEventListener("DOMContentLoaded",()=>{
+            const select = document.createElement('select');
+            document.body.appendChild(select);
+
+            const opt = ['떡볶이','순대','오뎅','튀김','김밥','라면'];
+            for(let i =0; i<opt.length; i++) {
+                let option = document.createElement('option');
+                option.textContent = opt[i];
+                select.appendChild(option);
+            }
+            const p = document.createElement('p');
+            document.body.appendChild(p);
+            p.innerHTML = '선택 : 떡볶이';
+
+            select.addEventListener('change', (event)=>{
+                const ok = event.currentTarget.value;
+                p.innerHTML = '선택 : ' + ok;
+            })
+
+        });
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

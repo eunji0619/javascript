@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODOLIST를 LocalStroage에 저장</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", ()=>{
+            const h1 = document.createElement("h1");
+            const input = document.createElement("input");
+            const button = document.createElement("button");
+            const edelete = document.createElement("button");
+            const div = document.createElement("div");
+            document.body.append(h1,input,button,edelete,div);
+            h1.innerHTML='TODOLIST';
+            button.innerHTML='추가하기';
+            edelete.innerHTML = '모두삭제하기';
+            
+            let arr = [];
+            let inputData = '';
+            input.addEventListener("keyup",(e)=>{
+                inputData = e.currentTarget.value;
+            })
+            edelete.addEventListener("click",()=>{
+                let popup = confirm('모두 삭제할까요?');
+                if(popup){
+                    arr = [];
+                    document.body.removeChild(div);
+                    localStorage.setItem('todo',arr);
+                }
+                else{
+                    alert('모두 삭제가 취소되었습니다.');
+                }
+            })
+            button.addEventListener('click',()=>{   
+                if(inputData){
+                    const ediv = document.createElement("div");
+                    const einput = document.createElement("input");
+                    const espan = document.createElement("span");
+                    const ebutton = document.createElement("button");
+                    einput.setAttribute("type","checkbox");
+
+                    arr.push(inputData);
+                    localStorage.setItem('todo',arr);
+
+                    espan.innerHTML = inputData
+                    ebutton.innerHTML = '제거하기';
+                    input.value = null;
+                    inputData = null;
+                    div.appendChild(ediv).append(einput,espan,ebutton);
+
+                    einput.addEventListener("click",(e)=>{
+                        ediv.style.textDecoration = e.currentTarget.checked?"line-through":'';
+                        localStorage.setItem('todo',arr);
+                    })
+
+                    ebutton.addEventListener("click",(e)=>{
+                        if(e.target)div.removeChild(ediv);
+                        localStorage.setItem('todo',arr);
+                    })
+                }else{alert('값을 넣어주세요!!')}
+            })
+        })
+    </script>
+</head>
+<body>
+    <pre><h2>
+        이전내용 추가
+        1. 추가버튼: 엔터를 쳐도 기능이 되게하라.
+        2. 중복제거: 기능추가 빈칸요소도 없애기
+        <!-- 3. 요소모두삭제: 팝업으로 삭제할까요?
+        라고 확인창 뜨기. (예yes =>삭제, no => 취소) -->
+    </h2></pre>
+</body>
+</html>

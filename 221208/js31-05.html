@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+    <script>
+        try{
+            console.log('try 블록이 시작됨');
+            if(confirm('에러를 발생시킬까요?'))what()
+        }
+        catch(e){
+            console.log('catch에서 에러 잡음' + e);
+        }
+        finally{
+            console.log('finally 연산이 끝까지 종료')
+        }
+    </script>
+</body>
+</html>

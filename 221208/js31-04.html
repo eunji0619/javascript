@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+    <script>
+        try{
+            JSON.parse('{잘못된 형식의 JSONㅋ}');
+        }
+        catch(e){
+            console.log(e)
+            console.log(e.name)
+            console.log(e.message)
+        }
+        finally{
+
+        }
+    </script>
+</body>
+</html>

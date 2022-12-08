@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>try catch</title>
+</head>
+<body>
+    <script>
+        function text(data){
+            try{
+                throw new Error('마마무 보고싶다!!');
+                console.log(data + '입니다.');
+            }
+            catch(e){   //e로 매개변수 사용
+                console.log('catch 에서 받은 에러 입니다.' + e);    //에러 내용 출력
+                return
+            }
+            finally{
+                console.log('함수 실행을 마칩니다.');
+            }
+        }
+    </script>
+</body>
+</html>

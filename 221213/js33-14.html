@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스 고급기능(get, set)</title>
+</head>
+<body>
+    <script>
+        //클래스 내부 변수에 # or _ 를 붙이면 내부에서만 사용가능
+        class Square{
+            #length //# = private = 읽기만하겠다.
+        
+            constructor(length){
+                this.length = length;
+            }
+            get length(){return this.#length}
+            get parimeter(){return this.#length *4}
+            get area(){return this.#length *this.#length};
+
+            set length(length){if(length <= 0){
+                throw '길이는 0보다 커야합니다.'
+                } this.#length = length
+            }
+        }
+
+        const SquareA = new Square(10);
+        console.log(`한변의 길이 : ${SquareA.length}`);
+        console.log(`둘레 : ${SquareA.perimeter}`);
+        console.log(`넓이 : ${SquareA.area}}`);
+
+        const SquareB = new Square(-10);
+    </script>
+</body>
+</html>

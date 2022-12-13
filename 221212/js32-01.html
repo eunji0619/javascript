@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <style>
+        :root{
+            --bkcolor0:#fde9e0;
+            --bkcolor1:#e9c9c5;
+            --bkcolor2:#e9ab9c;
+
+            --bcolor0:#e6f3ff;
+            --bcolor1:#c2dcf5;
+            --bcolor2:#9cc8f1;
+            --bcolor3:#6bb4f8;
+            --bcolor4:#e6d2f3;
+            --bcolor5:#dfc2f1;
+            --bcolor6:#d8b5f0;
+            --bcolor7:#cf9ef0;
+        }
+        .container{
+            padding: 30px;
+            border-radius: 15px;
+            background-color: var(--bkcolor0);
+            height: auto;
+            width: 100%;
+            max-width: 25rem;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+        #new-input{
+            font-size: 1em;
+            font-weight: bold;
+            margin: 0px;
+            padding: 5px;
+            width: 75%;
+            height: 100%;
+            border-radius: 10px 0 0 10px;
+            display: inline;
+            box-sizing: border-box;
+            border: 1px solid rgba(0,0,0,0.5);
+        }
+        #new-add{
+            font-size: 0.9em;
+            margin-left: -6px;
+            height: 100%;
+            width: 23%;
+            padding: 5px;
+            border-radius: 0 10px 10px 0;
+            display: inline;
+            box-sizing: border-box;
+            border: 1px solid rgba(0,0,0,0.5);
+            background-color: var(--bcolor0);
+        }
+        button{
+            margin: 3px;
+            border-radius: 10px;
+            background-color: var(--bcolor0);
+            border: 1px solid rgba(0,0,0,0.5);
+
+        }
+        .input-set{
+            height: 35px;
+            margin-bottom: 10px;
+        }
+    </style>
+    <script>
+        
+    </script>
+</head>
+<body>
+    <!-- div.container>div.main>h1+div>input#new-input+input#new-add^button#sel-del+button#all-del^div#list -->
+    <div class="container">
+        <div class="main">
+            <h1>할 일 목록</h1>
+            <div class="input-set">
+                <input type="text" id="new-input">
+                <input type="button" id="new-add" value="할일추가">
+            </div>
+            <button id="sel-del">완료제거</button>
+            <button id="all-del">모두제거</button>
+            <hr>
+        </div>
+        <div id="list">
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클래스의 고급기능(클래스상속)</title>
+</head>
+<body>
+    <script>
+        class Rectangle{
+            constructor(width,height){
+                this.width = width
+                this.height = height
+            }
+            getP(){
+                return (this.width+this.height)*2;
+            }
+            getA(){
+                return this.width*this.height;
+            }            
+        }
+        class Square extends Rectangle{
+            constructor(length){
+                super(length, length); //  constructor(width,height) 에서 가져옴
+            }
+        }
+        const square = new Square(10)
+        console.log('둘레:'+square.getP(),'면적:'+square.getA())
+        const square2 = new Square(20)
+        console.log('둘레2:'+square2.getP(),'면적2:'+square2.getA())
+        const rec = new Rectangle(20,10)
+        console.log('둘레3:'+rec.getP(),'면적3:'+rec.getA())
+    </script>
+</body>
+</html>
